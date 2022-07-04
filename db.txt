@@ -1,0 +1,3 @@
+FEATURE 'Pruebas de cluspac'
+SCENARIO 'Se espera ejecución exitosa'
+Consult 'SELECT * FROM NEWNET_DB_DUMP_AR WHERE ndb_submit_date = to_date(#13/May/2022#) and ndb_sms_content = #9999999999XAX97#'

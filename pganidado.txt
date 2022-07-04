@@ -1,0 +1,4 @@
+FEATURE 'Pruebas de cluspac'
+SCENARIO 'Se espera ejecución exitosa'
+dataflow '1f83071c-0181-1000-ffff-ffffe292ce2f'
+Processgroup 'test'
