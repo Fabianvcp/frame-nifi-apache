@@ -1,4 +1,0 @@
-FEATURE 'Pruebas de USSD-SMS'
-SCENARIO 'Se espera ejecución exitosa por 29'
-dataflow 'a9cdf847-59e7-17e8-0000-00000563997c'
-Processgroup 'USSD-SMS'
