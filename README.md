@@ -1,2 +1,59 @@
-# frame-nifi-apache
-Framework Apapche nifi y python
+# Framework-Testing-NiFi
+
+Framework de Testing automatizado utilizando la ApiRest de Apache NiFi, Elasticsearch, Oracle DB, entre otros.
+
+## FAQ
+
+#### ¿En qué lenguaje está desarrollado?
+
+Está desarrollado en Python 3.10 utilizando la plataforma Jupyter Lab.
+
+#### ¿Con qué ApiRest trabaja?
+
+Trabaja con las API de Apache NiFi, Oracle DB y Elasticsearch.
+
+#### ¿Qué bibliotecas utiliza de Python?
+- response
+- requests
+- json
+- urllib3
+- time
+- IPython.display
+- cx_Oracle
+- prettytable
+- elasticsearch
+- pysftp
+
+#### ¿Cuáles son los accesos?
+Para poder utilizar el Framework, debes usar los siguientes accesos según la plataforma:
+- Apache NiFi: usuario y contraseña de Claro.
+- Oracle: usuario, contraseña, puerto y DNS.
+- Elasticsearch: URL y api_key.
+
+#### ¿Cuáles son los status de los Processors?
+Los status de los processors que utilizamos son:
+- RUNNING (en ejecución).
+- STOPPED (detenido).
+
+#### ¿Cómo se lee la estructura de los archivos de texto?
+
+- FEATURE
+- SCENARIO "Nombre del escenario"
+- DATAFLOW "UUID del process group o DATAFLOW"
+- ACCION  "Nombre del componente"
+
+#### ¿Cuáles son las ACCIONES?
+- PLAY: Inicia el processor.
+- STOP: Detiene el processor.
+- CHECK: Verifica el contenido de la conexión.
+- CLEAR: Limpia el estado del processor.
+- PROCESSGROUP: Lee otro process group dentro del actual.
+- IMPRIMIR: Muestra la tabla con los resultados.
+- CONSULT: Inserta una sentencia SQL.
+
+## Ejecutar localmente
+
+Clonar el proyecto
+
+```bash
+  git clone http://tapias.claro.amx:7990/scm/dsn/framework-testing-nifi.git
