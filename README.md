@@ -57,3 +57,108 @@ Clonar el proyecto
 
 ```bash
   git clone http://tapias.claro.amx:7990/scm/dsn/framework-testing-nifi.git
+  
+```
+Iniciamos el Jupyter Lab
+
+```bash
+  jupyter lab
+```
+dirigete a la carpeta del proyecto
+
+```bash
+  cd my-project
+```
+
+Instalamos las librerias faltantes
+
+```bash
+  pip install libreria 
+```
+
+
+## Freamework Referencia
+
+### Nifi 
+
+#### Access
+
+```http
+  POST /access/token
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `username`, `password` | `string` | **Obligatorio**. obtencion del token access |
+
+#### Process Groups
+
+```http
+  GET /flow/process-groups/{UUID}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `UUID`      | `string` | **Obligatorio**. UUID del process group a buscar |
+
+
+#### Proccessor
+
+```http
+  GET /processors/{UUID}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `UUID`      | `string` | **Obligatorio**. UUID del processor a buscar |
+
+
+```http
+  PUT /processors/{UUID}/run-status
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `UUID`,`revision, status`    | `string` | **Obligatorio**. UUID del processor a buscar, por body la revision y status |
+
+
+
+```http
+  POST /processors/{UUID}/state/clear-requests
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `UUID`      | `string` | **Obligatorio**. UUID del processor a buscar y limpiar el state |
+
+
+#### Connections
+
+```http
+  GET /connections/{UUID}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `UUID`      | `string` | **Obligatorio**. UUID del connection |
+
+
+#### Input Ports
+
+```http
+  GET /input-ports/{UUID}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `UUID`      | `string` | **Obligatorio**. UUID del Input Ports |
+
+
+```http
+  PUT /input-ports/{UUID}/run-status
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `UUID`,`revision, status`    | `string` | **Obligatorio**. UUID del Input Port a buscar, por body la revision y status |
+
